@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Server List</title>
+    <style>
+        :root {
+            --bg-color: #d89999; /* Колір фону з вашого скріншоту */
+            --card-bg: #222;
+            --text-color: #fff;
+            --accent-color: #ff4d4d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .server-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .server-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .server-image {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .server-info {
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .server-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .server-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .online-status {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #44ff44;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Виберіть сервер для гри у раст</h1>
+    
+    <div class="server-grid">
+        <div class="server-card">
+            <div class="server-image" style="background-image: url('https://i.ibb.co/LzfNqfM/rustalyzer.png');"></div>
+            <div class="server-info">
+                <div class="server-title">RASTalyzer 28 ×2</div>
+                <div class="server-desc"><span class="online-status"></span> Classic survival experience.</div>
+            </div>
+        </div>
+
+        <div class="server-card">
+            <div class="server-image" style="background-image: url('https://i.ibb.co/SrtpXfP/magicrust.png');"></div>
+            <div class="server-info">
+                <div class="server-title">Magic Rust #27 — Vanilla 2x</div>
+                <div class="server-desc"><span class="online-status"></span> Long session, clan events.</div>
+            </div>
+        </div>
+
+        <div class="server-card">
+            <div class="server-image" style="background-color: #334; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CYBERNET</div>
+            <div class="server-info">
+                <div class="server-title">CyberNet Vanilla x1</div>
+                <div class="server-desc"><span class="online-status"></span> Monthly wipe, no mods.</div>
+            </div>
+        </div>
+
+        <div class="server-card">
+            <div class="server-image" style="background-color: #433; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">FORTRESS 5X</div>
+            <div class="server-info">
+                <div class="server-title">Fortress 5x No-Loot-Limit</div>
+                <div class="server-desc"><span class="online-status"></span> High rate, fast pvp action.</div>
+            </div>
+        </div>
+
+        <div class="server-card">
+            <div class="server-image" style="background-color: #343; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">EDEN</div>
+            <div class="server-info">
+                <div class="server-title">Eden Pure Survival x1.5</div>
+                <div class="server-desc"><span class="online-status"></span> Atmospheric survival.</div>
+            </div>
+        </div>
+
+        <div class="server-card">
+            <div class="server-image" style="background-color: #443; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">VOLT 10X</div>
+            <div class="server-info">
+                <div class="server-title">Volt Hyper-Modded 10x</div>
+                <div class="server-desc"><span class="online-status"></span> Max loot, max fun.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
